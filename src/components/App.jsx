@@ -1,12 +1,12 @@
 import { Component } from 'react';
-import { fetchPictures } from './fetchPictures/fetchPictures.jsx';
+import { fetchPictures } from 'components/fetchPictures/fetchPictures';
 
-import Searchbar from './Searchbar/Searchbar.jsx';
-import ImageGallery from './ImageGallery/ImageGallery.jsx';
-import ImageGalleryItems from './ImageGalleryItem/ImageGalleryItem.jsx';
-import Button from './Button/Button.jsx';
-import Loader from './Loader/Loader.jsx';
-import Modal from './Modal/Modal.jsx';
+import Searchbar from 'components/Searchbar/Searchbar';
+import ImageGallery from 'components/ImageGallery/ImageGallery';
+import ImageGalleryItems from 'components/ImageGalleryItem/ImageGalleryItem';
+import Button from 'components/Button/Button';
+import Loader from 'components/Loader/Loader';
+import Modal from 'components/Modal/Modal';
 
 class App extends Component {
   state = {
