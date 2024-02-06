@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { fetchPictures } from 'components/fetchPictures/fetchPictures';
+import fetchPictures from './fetchPictures/fetchPictures.jsx';
 
 import Searchbar from 'components/Searchbar/Searchbar';
 import ImageGallery from 'components/ImageGallery/ImageGallery';
