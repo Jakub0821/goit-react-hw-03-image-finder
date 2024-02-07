@@ -1,11 +1,11 @@
 import { Component } from 'react';
-import { fetchPictures } from 'components/fetchPictures/fetchPictures';
+import { fetchPictures } from 'components/fetchPictures/fetchPictures.jsx';
 
 import Searchbar from 'components/Searchbar/Searchbar';
 import ImageGallery from 'components/ImageGallery/ImageGallery';
 import ImageGalleryItems from 'components/ImageGalleryItem/ImageGalleryItem';
 import Button from 'components/Button/Button';
-import Loader from 'components/Loader/Loader';
+import Loader from 'components/Loader/Loader.jsx';
 import Modal from 'components/Modal/Modal.jsx';
 
 class App extends Component {
