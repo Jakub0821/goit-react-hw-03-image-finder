@@ -1,36 +1,29 @@
-import galleryItemsStyle from './ImageGalleryItem.module.css';
-import PropTypes from 'prop-types';
+import css from './ImageGalleryItem.module.css'
+import PropTypes from 'prop-types'
 
-const ImageGalleryItems = ({ items, getData }) => {
-  return (
-    <>
-      {items &&
-        items.map(item => {
-          return (
-            <li key={item.id} className={galleryItemsStyle.item}>
-              <img
-                className={galleryItemsStyle.image}
-                src={item.webformatURL}
-                alt={item.description}
-                data-large={item.largeImageURL}
-                onClick={getData}
-              />
-            </li>
-          );
-        })}
-    </>
-  );
+export const ImageGalleryItem = (props) => {
+    const { webformatURL, largeImageURL, tags, onClick } = props
+
+    const handleImageClick = () => {
+        onClick({ webformatURL, largeImageURL, tags })
+    };
+
+    return (
+        <li className={css.gallery__item} data-url={largeImageURL}>
+            <img
+                className={css.gallery__image}
+                src={webformatURL}
+                alt={tags}
+                loading="lazy"
+                onClick={handleImageClick}
+            />
+        </li>
+    );
 };
 
-ImageGalleryItems.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      webformatURL: PropTypes.string,
-      description: PropTypes.string,
-      largeImageURL: PropTypes.string,
-    })
-  ),
-  getData: PropTypes.func,
+ImageGalleryItem.propTypes = {
+    webformatURL: PropTypes.string.isRequired,
+    largeImageURL: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
 };
-
-export default ImageGalleryItems;

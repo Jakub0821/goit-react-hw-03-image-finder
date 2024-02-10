@@ -1,23 +1,24 @@
-import modalStyles from './Modal.module.css';
-import PropTypes from 'prop-types';
+import css from './Modal.module.css'
+import PropTypes from 'prop-types'
 
-const Modal = ({ imgObject, closeModal }) => {
-  return (
-    <>
-      {imgObject.large && (
-        <div className={modalStyles.overlay} onClick={closeModal}>
-          <div className={modalStyles.modal}>
-            <img src={imgObject.large} alt={imgObject.alt} />
-          </div>
+export const Modal = ({ largeImageURL, tags, onClick }) => {
+
+    return (
+        <div className={css.overlay}>
+            <div className={css.modal}>
+                <img
+                    className={css.image}
+                    src={largeImageURL}
+                    alt={tags}
+                    onClick={onClick}
+                />
+            </div>
         </div>
-      )}
-    </>
-  );
-};
+    )
+}
 
 Modal.propTypes = {
-  imgObject: PropTypes.objectOf(PropTypes.string),
-  closeModal: PropTypes.func,
-};
-
-export default Modal;
+    largeImageURL: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+}
