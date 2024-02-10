@@ -1,7 +1,7 @@
 import { Component, createRef } from 'react'
 import css from './ImageGallery.module.css'
 import PropTypes from 'prop-types'
-import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem'
+import { ImageGalleryItem } from 'components/ImageGalleryItems/ImageGalleryItems'
 import { getImages } from 'services/api'
 import { Loader } from 'components/Loader/Loader'
 import { Modal } from 'components/Modal/Modal'
