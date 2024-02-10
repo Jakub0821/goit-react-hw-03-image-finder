@@ -1,12 +1,12 @@
 import { Component } from 'react';
-import Container from 'components/Container/Container.jsx';
+import { Container } from './Container/Container';;
 
 import Searchbar from 'components/Searchbar/Searchbar';
 import ImageGallery from 'components/ImageGallery/ImageGallery';
 import ImageGalleryItems from 'components/ImageGalleryItem/ImageGalleryItem';
 import Button from 'components/Button/Button';
-import Loader from 'components/Loader/Loader.jsx';
-import Modal from 'components/Modal/Modal.jsx';
+import Loader from 'components/Loader/Loader';
+import Modal from 'components/Modal/Modal';
 
 class App extends Component {
   state = {
@@ -35,7 +35,7 @@ class App extends Component {
     });
     const searchText = this.state.inputValue.split(' ').join('+');
 
-    fetchPictures(searchText, page).then(response => {
+    Container(searchText, page).then(response => {
       this.setState({
         loader: false,
         loaderSecond: false,
