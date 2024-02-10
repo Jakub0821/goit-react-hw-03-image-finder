@@ -1,12 +1,12 @@
 import { Component } from 'react';
-import { Container } from './Container/Container';;
+import { Container } from './Container/Container';
 
-import Searchbar from 'components/Searchbar/Searchbar';
-import ImageGallery from 'components/ImageGallery/ImageGallery';
-import ImageGalleryItems from 'components/ImageGalleryItem/ImageGalleryItem';
-import Button from 'components/Button/Button';
-import Loader from 'components/Loader/Loader';
-import Modal from 'components/Modal/Modal';
+import Searchbar from './Searchbar/Searchbar';
+import ImageGallery from './ImageGallery/ImageGallery';
+import ImageGalleryItem from './ImageGalleryItems/ImageGalleryItems';
+import Button from './Button/Button';
+import Loader from './Loader/Loader';
+import Modal from './Modal/Modal';
 
 class App extends Component {
   state = {

@@ -1,4 +1,4 @@
-import css from './ImageGalleryItem.module.css'
+import css from './ImageGalleryItems.module.css'
 import PropTypes from 'prop-types'
 
 export const ImageGalleryItem = (props) => {
