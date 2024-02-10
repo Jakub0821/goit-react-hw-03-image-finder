@@ -3,7 +3,7 @@ import { Container } from './Container/Container';
 
 import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
-import ImageGalleryItem from './ImageGalleryItems/ImageGalleryItems';
+import ImageGalleryItems from './ImageGalleryItems/ImageGalleryItems';
 import Button from './Button/Button';
 import Loader from './Loader/Loader';
 import Modal from './Modal/Modal';
