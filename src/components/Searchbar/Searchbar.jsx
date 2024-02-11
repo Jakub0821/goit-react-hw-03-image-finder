@@ -1,6 +1,5 @@
 import css from './Searchbar.module.css'
 import PropTypes from 'prop-types'
-
 import { SearchForm } from 'components/SearchForm/SearchForm'
 
 export const Searchbar = ({ onSubmit }) => {
